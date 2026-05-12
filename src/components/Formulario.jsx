@@ -10,7 +10,6 @@ function Formulario() {
       </h2>
 
       <div className="grid md:grid-cols-2 gap-6">
-
         {/* EMAIL */}
         <div className="flex flex-col">
           <label className="font-semibold mb-1">Email do Solicitante</label>
@@ -50,9 +49,9 @@ function Formulario() {
 
         {/* CPF / CNPJ */}
         <div className="flex flex-col">
-          <label className="font-semibold mb-1">{
-              estrangeiro ? "Documento estrangeiro" : "CPF/CNPJ"
-            }</label>
+          <label className="font-semibold mb-1">
+            {estrangeiro ? "Documento Estrangeiro" : "CPF/CNPJ"}
+          </label>
           <input
             type="text"
             className={`border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400 `}
@@ -62,19 +61,15 @@ function Formulario() {
         {/* DOCUMENTO ESTRANGEIRO */}
         {estrangeiro && (
           <div className="flex flex-col">
-            <label className="font-semibold mb-1">
-              Documento Estrangeiro
-            </label>
+            <label className="font-semibold mb-1">Documento Estrangeiro</label>
             <select className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400">
               <option value="CRNM">
                 Carteira de Registro Nacional Migratório
               </option>
-              <option value="PSR">
-                Protocolo de Solicitação de Residência
-              </option>
+              <option value="PSR">Protocolo de Sol Residência</option>
               <option value="passaporte">Passaporte</option>
               <option value="DPRNM">
-                Documento Provisório de Registro Nacional Migratório
+                Doc Provisório de Regis Nacional Migratório
               </option>
               <option value="PDR">Protocolo de Refúgio</option>
             </select>
@@ -123,9 +118,7 @@ function Formulario() {
 
         {/* RUA */}
         <div className="flex flex-col md:col-span-2">
-          <label className="font-semibold mb-1">
-            Nome da Rua e Número
-          </label>
+          <label className="font-semibold mb-1">Nome da Rua e Número</label>
           <input
             type="text"
             className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
@@ -149,83 +142,85 @@ function Formulario() {
             className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
         </div>
-        
       </div>
       <h2 className="text-2xl font-bold mb-6 border-b border-green-400 p-4">
         Dados da certidao
       </h2>
 
-        {/* DOCUMENTO ESTRANGEIRO */}
-        {estrangeiro && (
-          <div className="flex flex-col">
-            <label className="font-semibold mb-1">
-              Documento Estrangeiro
-            </label>
-            <select className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400">
-              <option value="CRNM">
-                Carteira de Registro Nacional Migratório
-              </option>
-              <option value="PSR">
-                Protocolo de Solicitação de Residência
-              </option>
-              <option value="passaporte">Passaporte</option>
-              <option value="DPRNM">
-                Documento Provisório de Registro Nacional Migratório
-              </option>
-              <option value="PDR">Protocolo de Refúgio</option>
-            </select>
-          </div>
-        )}
-
-         {/* CPF / CNPJ */}
+      {/* DOCUMENTO ESTRANGEIRO */}
+      {estrangeiro && (
         <div className="flex flex-col">
-          <label className="font-semibold mb-1">{
-              estrangeiro ? "Documento estrangeiro" : "CPF/CNPJ"
-            }</label>
-          <input
-            type="text"
-            className={`border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400 `}
-          />
+          <label className="font-semibold mb-1">Documento Estrangeiro</label>
+          <select className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400">
+            <option value="CRNM">
+              Carteira de Registro Nacional Migratório
+            </option>
+            <option value="PSR">Protocolo de Sol Residência</option>
+            <option value="passaporte">Passaporte</option>
+            <option value="DPRNM">
+              Doc Provisório de Regis Nacional Migratório
+            </option>
+            <option value="PDR">Protocolo de Refúgio</option>
+          </select>
         </div>
+      )}
 
-        <div className="flex flex-col">
-          <label className="font-semibold mb-1">Nome do Solicitado</label>
-          <input
-            type="text"
-            className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-        </div>
+      {/* CPF / CNPJ */}
+      <div className="flex flex-col">
+        <label className="font-semibold mb-1">
+          {estrangeiro ? "Documento estrangeiro" : "CPF/CNPJ"}
+        </label>
+        <input
+          type="text"
+          className={`border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400 `}
+        />
+      </div>
 
-        <div className="flex flex-col">
-          <label className="font-semibold mb-1">Nascimento</label>
-          <input
-            type="date"
-            className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-        </div>
+      <div className="flex flex-col">
+        <label className="font-semibold mb-1">Nome do Solicitado</label>
+        <input
+          type="text"
+          className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+      </div>
 
-        <div className="flex flex-col">
-          <label className="font-semibold mb-1">Nome do Pai (preencher para pedido de certidão criminal)</label>
-          <input
-            type="text"
-            className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-        </div>
+      <div className="flex flex-col">
+        <label className="font-semibold mb-1">Nascimento</label>
+        <input
+          type="date"
+          className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+      </div>
 
-        <div className="flex flex-col">
-          <label className="font-semibold mb-1">Nome da Mãe (preencher para pedido de certidão criminal)</label>
-          <input
-            type="text"
-            className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-        </div>
-        
-        <div className="border-2 border-green-400 p-2 rounded-lg text-center w-[100px] m-2">
-                <button onClick={()=>alert('Enviado')} className="flex items-center justify-"> Finalizar
-                </button>
-            </div>
-        
-        
+      <div className="flex flex-col">
+        <label className="font-semibold mb-1">
+          Nome do Pai (preencher para pedido de certidão criminal)
+        </label>
+        <input
+          type="text"
+          className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+      </div>
+
+      <div className="flex flex-col">
+        <label className="font-semibold mb-1">
+          Nome da Mãe (preencher para pedido de certidão criminal)
+        </label>
+        <input
+          type="text"
+          className="border border-green-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+        />
+      </div>
+
+      <div className="border-2 border-green-400 p-2 rounded-lg text-center w-[100px] m-2">
+        <button
+          onClick={() => alert("Enviado")}
+          className="flex items-center justify-center"
+        >
+          {" "}
+          Finalizar
+        </button>
+      </div>
     </div>
   );
 }
